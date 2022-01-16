@@ -42,7 +42,6 @@ export class NgrokStatusService {
         region: connection.region,
       })
       .then((remoteAddr) => {
-        console.log(remoteAddr);
         this.ngrokTunnelService.updateRemoteAddr(connection.id, remoteAddr);
         return remoteAddr;
       });
