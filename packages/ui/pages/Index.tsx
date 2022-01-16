@@ -1,7 +1,6 @@
 import Header from '../components/Header';
 import NgrokConceptImage from '../public/ngrok-concept.jpg';
-import NgrokConceptMobileImage from '../public/ngrok-concept-mobile.jpg';
-import { BodyDiv } from '../styles/body.style';
+import { BodyDiv, ContentDiv } from '../styles/body.style';
 
 const Index = () => {
   return (
@@ -9,23 +8,14 @@ const Index = () => {
       <Header />
       <BodyDiv>
         <h1>Tunnel Services</h1>
-        <h2>Web UI for Tunnel Services</h2>
-        <picture>
-          <source
-            style={{ maxWidth: '100%' }}
-            media={'(min-width: 1024px)'}
-            srcSet={NgrokConceptImage.src}
-          />
-          <source
-            style={{ maxWidth: '100%' }}
-            srcSet={NgrokConceptMobileImage.src}
-          />
+        <ContentDiv>
+          <h3>Web UI for Tunnel Services</h3>
           <img
             style={{ maxWidth: '100%' }}
-            src={NgrokConceptMobileImage.src}
+            src={NgrokConceptImage.src}
             alt="concept for tunnel service"
           />
-        </picture>
+        </ContentDiv>
       </BodyDiv>
     </>
   );
