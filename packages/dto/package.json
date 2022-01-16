@@ -1,0 +1,26 @@
+{
+  "name": "dto",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "hyeonseungkang <h5k@ajou.ac.kr>",
+  "homepage": "",
+  "license": "ISC",
+  "private": "true",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "afterinstall": "npm run build",
+    "build": "node_modules/.bin/tsc -p tsconfig.build.json",
+    "build:watch": "node_modules/.bin/tsc -p tsconfig.build.json -w --preserveWatchOutput",
+    "start:dev": "npm run build:watch"
+  },
+  "dependencies": {
+    "@nestjs/common": "^8.2.5",
+    "@nestjs/core": "^8.2.5",
+    "@nestjs/swagger": "^5.1.5",
+    "cache-manager": "^3.6.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "typescript": "^4.5.4"
+  }
+}
