@@ -3,7 +3,7 @@ import { NgrokTunnelService } from './ngrok-tunnel.service';
 import * as ngrok from 'ngrok';
 import { Logger } from '../logger/logger';
 import { NgrokConfigService } from './ngrok-config.service';
-import { JobTag, NgrokConfigKey, Protocol, TargetTag } from 'dto';
+import { JobTag, NgrokConfigKey, TargetTag } from 'dto';
 
 @Injectable()
 export class NgrokStatusService {
@@ -68,7 +68,7 @@ export class NgrokStatusService {
   public async stop(id: number) {
     const response = await this.ngrokTunnelService.findOne(id);
     if (!response.remoteAddr) return;
-    if (response.proto === Protocol.HTTP) {
+    if (response.remoteAddr.includes('http')) {
       ngrok
         .disconnect(
           response.remoteAddr.includes('https')
