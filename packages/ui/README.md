@@ -1,11 +1,9 @@
 # `ui`
 
-> TODO: description
+> ui package for tunnel services package - nextjs
 
 ## Usage
 
 ```
-const ui = require('ui');
-
-// TODO: DEMONSTRATE API
+this package run dependently with server package
 ```

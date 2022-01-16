@@ -1,11 +1,10 @@
 # `server`
 
-> TODO: description
+> server package for tunnel services package - nestjs
 
 ## Usage
 
 ```
-const server = require('server');
-
-// TODO: DEMONSTRATE API
+1. Build
+2. npm run start
 ```

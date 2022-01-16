@@ -1,8 +1,8 @@
 {
   "name": "dto",
   "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "hyeonseungkang <h5k@ajou.ac.kr>",
+  "description": "dto package for tunnel services package",
+  "author": "HYEONSEUNG KANG <h5k@ajou.ac.kr>",
   "homepage": "",
   "license": "ISC",
   "private": "true",

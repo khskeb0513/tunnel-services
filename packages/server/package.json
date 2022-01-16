@@ -1,8 +1,8 @@
 {
   "name": "server",
   "version": "0.0.1",
-  "description": "> TODO: description",
-  "author": "hyeonseungkang <h5k@ajou.ac.kr>",
+  "description": "backend for tunnel services package - nestjs",
+  "author": "HYEONSEUNG KANG <h5k@ajou.ac.kr>",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

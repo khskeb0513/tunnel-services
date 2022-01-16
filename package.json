@@ -1,6 +1,8 @@
 {
   "name": "root",
   "private": true,
+  "author": "hyeonseungkang <h5k@ajou.ac.kr>",
+  "description": "Web UI for tunnel services.",
   "workspaces": [
     "packages/*"
   ],

@@ -1,8 +1,8 @@
 {
   "name": "ui",
   "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "hyeonseungkang <h5k@ajou.ac.kr>",
+  "description": "frontend for tunnel services package - nextjs",
+  "author": "HYEONSEUNG KANG <h5k@ajou.ac.kr>",
   "license": "ISC",
   "private": "true",
   "scripts": {
