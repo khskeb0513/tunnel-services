@@ -5,16 +5,18 @@ import { CreateNgrokConfigDto } from './dto/create-ngrok-config.dto';
 import { NgrokConfigKey } from 'dto';
 import { UpdateNgrokConfigDto } from './dto/update-ngrok-config.dto';
 import { ResponseNgrokConfigDto } from './dto/response-ngrok-config.dto';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class NgrokConfigService {
   constructor(
     @InjectRepository(NgrokConfigRepository)
     private readonly ngrokConfigRepository: NgrokConfigRepository,
+    private readonly configService: ConfigService,
   ) {
     this.create({
       key: NgrokConfigKey.AUTH_TOKEN,
-      value: '',
+      value: this.configService.get('NGROK_AUTH_TOKEN'),
     });
   }
 

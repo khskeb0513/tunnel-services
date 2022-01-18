@@ -9,9 +9,13 @@ import { Logger } from './logger/entity/logger.entity';
 import { NgrokTunnel } from './ngrok/entity/ngrok-tunnel.entity';
 import { NgrokConfig } from './ngrok/entity/ngrok-config.entity';
 import { LoggerHttpModule } from './logger/logger-http.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     RenderModule.forRootAsync(
       Next({
         dev: true,
