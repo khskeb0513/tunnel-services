@@ -83,4 +83,10 @@ export class NgrokTunnelService {
     await this.ngrokStatusService.stop(id);
     return this.ngrokTunnelRepository.delete({ id });
   }
+
+  public async findDefaultTunnel() {
+    return this.ngrokTunnelRepository.findOne({
+      name: 'default-for-this-application',
+    });
+  }
 }

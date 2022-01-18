@@ -21,7 +21,15 @@ export class NgrokStatusService {
         }),
       )
       .then(() => this.ngrokTunnelService.removeAddRemoteAddr())
-      .then(() => this.startRoutine());
+      .then(() => this.startRoutine())
+      .then(() =>
+        this.ngrokTunnelService.findDefaultTunnel().then((tunnel) => {
+          this.logger.log(
+            `Default Ngrok Connection opened: ${tunnel.remoteAddr}`,
+            NgrokStatusService.name,
+          );
+        }),
+      );
   }
 
   public async start(id: number) {
